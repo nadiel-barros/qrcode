@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 90vh;
+  margin-top: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  max-width: 300px;
+  width: 100%;
+  margin: 20px auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.containerQrcode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+  width: 100%;
+  height: 25vw;
+  margin: 0 auto;
+}
+
+.input-container {
+  position: relative; /* Adicionando posicionamento relativo para poder posicionar o botão */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  width: 120%;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  border-radius: 40px;
+}
+
+.input:focus {
+  border-color: #127edb;
+  outline: none;
+}
+
+.input::placeholder {
+  color: #aaa;
+}
+
+.input {
+  display: inline-flex;
+}
+
+.button {
+  position: absolute; /* Adicionando posicionamento absoluto para posicionar o botão */
+  top: 50%; /* Posicionando o botão no meio verticalmente */
+  transform: translateY(-50%); /* Centralizando verticalmente */
+  right: -25px; /* Posicionando o botão à direita do input */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 50%;
+}
+
+.button:focus {
+  outline: none;
+}
+
+/* Adicione estilos para o ícone do botão aqui */
+.icon {
+
 }
