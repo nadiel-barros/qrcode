@@ -32,7 +32,8 @@
 }
 
 .input {
-  width: 120%;
+  width: 100%;
+  max-width: 300px;
   padding: 15px;
   font-size: 16px;
   border: 1px solid #ddd;
@@ -57,7 +58,7 @@
   position: absolute; /* Adicionando posicionamento absoluto para posicionar o botão */
   top: 50%; /* Posicionando o botão no meio verticalmente */
   transform: translateY(-50%); /* Centralizando verticalmente */
-  right: -25px; /* Posicionando o botão à direita do input */
+  right: -5px; /* Posicionando o botão à direita do input */
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -71,4 +72,214 @@
 /* Adicione estilos para o ícone do botão aqui */
 .icon {
 
+}
+
+@media (max-width: 1024px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin-top: 10px;
+  }
+  
+  .container {
+    max-width: 300px;
+    width: 100%;
+    margin: 20px auto;
+  }
+  
+  .containerQrcode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    width: 100%;
+    height: 25vw;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  
+  .input-container {
+    position: relative; /* Adicionando posicionamento relativo para poder posicionar o botão */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .input {
+    width: 120%;
+    max-width: 300px;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    border-radius: 40px;
+  }
+  
+  .input:focus {
+    border-color: #127edb;
+    outline: none;
+  }
+  
+  .input::placeholder {
+    color: #aaa;
+  }
+  
+  .input {
+    display: inline-flex;
+  }
+  
+  .button {
+    position: absolute; /* Adicionando posicionamento absoluto para posicionar o botão */
+    top: 50%; /* Posicionando o botão no meio verticalmente */
+    transform: translateY(-50%); /* Centralizando verticalmente */
+    right: -20px; /* Posicionando o botão à direita do input */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin-top: 10px;
+  }
+  
+  .container {
+    max-width: 300px;
+    width: 100%;
+    margin: 20px auto;
+  }
+  
+  .containerQrcode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    width: 100%;
+    height: 25vw;
+    margin: 0 auto;
+    margin-bottom: 70px;
+  }
+  
+  .input-container {
+    position: relative; /* Adicionando posicionamento relativo para poder posicionar o botão */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .input {
+    width: 120%;
+    max-width: 300px;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    border-radius: 40px;
+  }
+  
+  .input:focus {
+    border-color: #127edb;
+    outline: none;
+  }
+  
+  .input::placeholder {
+    color: #aaa;
+  }
+  
+  .input {
+    display: inline-flex;
+  }
+  
+  .button {
+    position: absolute; /* Adicionando posicionamento absoluto para posicionar o botão */
+    top: 50%; /* Posicionando o botão no meio verticalmente */
+    transform: translateY(-50%); /* Centralizando verticalmente */
+    right: -20px; /* Posicionando o botão à direita do input */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin-top: 10px;
+  }
+  
+  .container {
+    max-width: 300px;
+    width: 100%;
+    margin: 20px auto;
+  }
+  
+  .containerQrcode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    width: 90%;
+    height: 25vw;
+    margin: 0 auto;
+    margin-bottom: 110px;
+  }
+  
+  .input-container {
+    position: relative; /* Adicionando posicionamento relativo para poder posicionar o botão */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .input {
+    width: 120%;
+    max-width: 300px;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    border-radius: 40px;
+  }
+  
+  .input:focus {
+    border-color: #127edb;
+    outline: none;
+  }
+  
+  .input::placeholder {
+    color: #aaa;
+  }
+  
+  .input {
+    display: inline-flex;
+  }
+  
+  .button {
+    position: absolute; /* Adicionando posicionamento absoluto para posicionar o botão */
+    top: 50%; /* Posicionando o botão no meio verticalmente */
+    transform: translateY(-50%); /* Centralizando verticalmente */
+    right: -20px; /* Posicionando o botão à direita do input */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 50%;
+  }
 }
