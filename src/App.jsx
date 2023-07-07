@@ -1,52 +1,53 @@
 import { useState } from "react";
 import QRCode from "react-qr-code";
-import QRCodeLink from 'qrcode';
 
 import "./App.css";
 
 function App() {
-  const [link, setLink] = useState("");
-  const [qrcodeLink, setQrcodeLink] = useState("");
+  const [inputValue, setInputValue] = useState("");
+  const [qrcodeImage, setQRCodeImage] = useState("");
 
-  function handleGenerate(link_url){
-    QRCodeLink.toDataURL(link_url,{
-      width: 600,
-      margin:3,
-    }, function (err, url){
-      setQrcodeLink(url)
-    })
+  function handleGenerate(link_url) {
+    setQRCodeImage(link_url);
   }
 
-  function handleQrcode(e) {
-    setLink(e.target.value)
-    handleGenerate(e.target.value)
+  function handleInputChange(e) {
+    const value = e.target.value;
+    setInputValue(value);
+
+    if (isPhoneNumber(value)) {
+      handleGenerate(`https://wa.me/55${value}`);
+    } else {
+      handleGenerate(value);
+    }
   }
 
-  
+  function isPhoneNumber(content) {
+    return /^\d+$/.test(content);
+  }
+
   return (
     <div className="container">
-
-
       <div className="containerQrcode">
-        <QRCode value={link} />
+        <QRCode value={qrcodeImage} />
       </div>
-
-
       <div className="input-container">
-        <input type="text" className="input" 
-        placeholder="Digite algo aqui"
-        value={link}
-        onChange={  (e) => handleQrcode(e)}
+        <input
+          type="text"
+          className="input"
+          placeholder="Whatsapp, URL ou texto"
+          value={inputValue}
+          onChange={handleInputChange}
         />
         <button className="button">
-          <a href={qrcodeLink}  download={`qrcode.png`}>
+          <a href={qrcodeImage} download={`qrcode.png`}>
             <img src=".\Vector.png" alt="Ícone do botão" className="icon" />
           </a>
-          
         </button>
       </div>
     </div>
   );
+  
 }
 
 export default App;
